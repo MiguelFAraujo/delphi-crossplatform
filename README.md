@@ -12,7 +12,7 @@ Desenvolvimento Delphi nativo cross-platform (Windows, Linux, macOS, Android, iO
 - FireDAC para acesso a dados multi-DB
 - DUnitX para testes unitarios
 - Docker para build Linux/ARM64
-- Lab integration: Ollama AI review, n8n CI/CD, observabilidade
+- Integracao lab: Ollama AI review, n8n CI/CD, observabilidade
 
 ## Arquitetura
 
@@ -55,19 +55,19 @@ dunitx.runner.exe DelphiAppTests.exe
 | DB Query (FireDAC) | 0.8ms | 1.1ms | 2.3ms | FireDAC Monitor |
 | Binary Size | 4.2MB | 5.8MB | 12MB | ls -lh |
 
-Testado em: Orange Pi 5 (RK3588, Linux ARM64) + Windows 11 VM
-IDE: IntelliJ Ultimate 2026.2 + Delphi Plugin | Delphi: 12 Athens | OS: Ubuntu 24.04 / Windows 11
+> **Hardware de teste**: Daten DQ170UP (Intel Core i5-7600T 2.8GHz, 15GB RAM, Ubuntu 24.04 LTS) + Windows 11 VM
+> **IDE**: IntelliJ Ultimate 2026.2 + Delphi Plugin | **Delphi**: 12 Athens | **OS**: Ubuntu 24.04 LTS / Windows 11
 
 ## Recursos IntelliJ + Delphi Plugin
 
 | Recurso | Configuracao | Descricao |
 |---------|--------------|-----------|
-| Code Insight | .idea/delphi.xml | Completion, navigation, refactoring |
-| Debugger | .idea/runConfigurations/ | Linux remote debug via gdbserver |
-| FireMonkey Designer | .idea/fmx.xml | Live preview, component palette |
-| FireDAC | .idea/dataSources.xml | Conexoes MariaDB, PG, SQLite |
-| DUnitX Runner | .idea/runConfigurations/ | Test runner integrado |
-| AI Review | scripts/ai_review.pas | Ollama analisa diffs PR |
+| Code Insight | `.idea/delphi.xml` | Completion, navigation, refactoring |
+| Debugger | `.idea/runConfigurations/` | Linux remote debug via gdbserver |
+| FireMonkey Designer | `.idea/fmx.xml` | Live preview, component palette |
+| FireDAC | `.idea/dataSources.xml` | Conexoes MariaDB, PG, SQLite |
+| DUnitX Runner | `.idea/runConfigurations/` | Test runner integrado |
+| AI Review | `scripts/ai_review.pas` | Ollama analisa diffs PR |
 
 ## Estrutura do Projeto
 
@@ -155,5 +155,5 @@ FastMM4 + ReportMemoryLeaksOnShutdown := True
 ---
 
 Desenvolvido com IntelliJ Ultimate 2026.2 + Delphi Plugin + Educational Pack BD24G146N7
-Testado no IDT-Lab (MariaDB + PostgreSQL + Redis + Prometheus + Grafana + Ollama + n8n + Tailscale)
-Parte do Portfolio JetBrains IDE
+Lab-tested on IDT-Lab (Daten DQ170UP + MariaDB + PostgreSQL + Redis + Prometheus + Grafana + Ollama + n8n + Tailscale)
+Parte do JetBrains IDE Portfolio
